@@ -1,0 +1,92 @@
+.input {
+  font-family: 'Rubik Mono One', sans-serif;
+  color: var(--primary-color);
+  font-size: 4em;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 3px;
+  border: 3px solid var(--primary-color);;
+  outline: none;
+  padding: 2%;
+  margin-top: 2%;
+}
+::-webkit-input-placeholder {
+  font-size: 0.5em;
+}
+::-moz-placeholder {
+  font-size: 0.5em;
+}
+:-ms-input-placeholder {
+  font-size: 0.5em;
+}
+::placeholder {
+  font-size: 0.5em;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  max-height: 300%;
+  overflow: auto;
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  z-index: 1;
+  min-width: 100%;
+  text-align: left;
+  /* border: none; */
+  font-size: 0.7em;
+  line-height: 1.5em;
+
+  border-radius: 3px;
+  border: 1px solid transparent;
+  border-top: none;
+  border-bottom: 1px solid #DDD;
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         1px 1px 1px 1px #ccc;
+  outline: none;
+}
+.dropdown-content a {
+  color: rgba(255, 60, 0, 0.76);
+  padding: 15px 5px;
+  display: block;
+  font-size: 1.3em;
+}
+a:nth-child(odd){
+  background: rgb(251, 251, 251);
+}
+.dropdown-content a:hover {
+  color: rgb(255, 60, 0);
+}.card-exchange{
+  height: 290px;
+  width: 320px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 2px 1px #ccc;
+  color: white;
+}
+.card-top{
+  border-radius: 6px 6px 0px 0px;
+  background-color: var(--primary-color);
+  min-height: 100px;
+  padding-top: 10px;
+  padding-left: 10px;
+  text-align: left;
+  font-size: 0.8em;
+}
+.card-content{
+  font-family: 'Roboto', Courier, monospace;
+  font-size: 1.1em;
+  padding-top: 10px;
+  padding-left: 10px;
+  color: rgb(44, 44, 44);  
+  text-align: left;
+  line-height:0.6em;
+}
+.card-content h3{
+  padding-bottom: 20px;
+}
+.card-content h5{
+  color: rgb(88, 88, 88);
+}

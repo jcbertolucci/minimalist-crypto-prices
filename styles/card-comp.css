@@ -1,0 +1,31 @@
+.card-exchange{
+  height: 290px;
+  width: 320px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 2px 1px #ccc;
+  color: white;
+}
+.card-top{
+  border-radius: 6px 6px 0px 0px;
+  background-color: var(--primary-color);
+  min-height: 100px;
+  padding-top: 10px;
+  padding-left: 10px;
+  text-align: left;
+  font-size: 0.8em;
+}
+.card-content{
+  font-family: 'Roboto', Courier, monospace;
+  font-size: 1.1em;
+  padding-top: 10px;
+  padding-left: 10px;
+  color: rgb(44, 44, 44);  
+  text-align: left;
+  line-height:0.6em;
+}
+.card-content h3{
+  padding-bottom: 20px;
+}
+.card-content h5{
+  color: rgb(88, 88, 88);
+}

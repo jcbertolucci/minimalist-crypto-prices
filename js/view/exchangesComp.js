@@ -1,17 +1,23 @@
-import removeChildren from './removeChildren';
-import {exchanges} from '../model/data'
+import removeChildren from '../util/util';
 
-export default function renderExhanges(coinName){
+export default function renderExchangeComponent(arrayExchanges){
 
+  /* let h1_html = '<h1>Test</h1>' */
   let bottomDiv = document.getElementById("section-bottom"); 
-  let filteredExchanges = exchanges.filter( (exchange) =>{
-    return (exchange.coin.toLowerCase() === coinName.toLowerCase())
-  })
-
+  /* bottomDiv.insertAdjacentHTML('afterbegin',h1_html); 
+    <!-- beforebegin -->
+    <p>
+      <!-- afterbegin -->
+      foo
+      <!-- beforeend -->
+    </p>
+    <!-- afterend -->
+  */
   removeChildren(bottomDiv);
   
-  if (filteredExchanges.length > 0){
-    filteredExchanges.map( (exchange) => {
+  if (arrayExchanges.length > 0){
+    
+    arrayExchanges.map( (exchange) => {
       let newDiv = document.createElement("div");
       newDiv.classList.add("all-border");
       newDiv.classList.add("child-container");

@@ -1,101 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One|Ubuntu:400,700');
 
 *{ 
   box-sizing: border-box; 
+  
 }
 body{
-  margin: 0;
-  /* font-family: 'Roboto', sans-serif; */
-  font-family: Lato;
   --primary-color: rgb(235, 67, 1);
+  margin: 0;
   color: var(--primary-color);
+  background-color: white;
+  font-family: 'Rubik Mono One', sans-serif;  
 }
-h1{
-  font-size: 6em;
-  font-weight: 700;
+.wrapper{
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  justify-items: center;
+  grid-row-gap: 150px;
 }
-.container{
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
+.flex-top{
 }
-.child-container{
-  width: 32%;
-  margin-top: 2%;
-  background-color: var(--primary-color);
+.flex-middle{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 40px;
 }
-.search-input{
-  font-size: 8em;
-  width: 100%;
-  color: var(--primary-color);
-  font-weight: 700;
-  border: none;
-  padding-bottom: 0.5%;
+.flex-bottom{
+  
 }
-.search-input:focus{
-  outline: none;
-}
-.top{
-  padding-top: 5%;
-  color: var(--primary-color);
-}
-.bottom{
-  padding-top: 2%;
-  color: rgb(231, 229, 229);
-}
-.bottom-border{
-  border: none;
-  border-bottom: 0.6em solid var(--primary-color);
-}
-.all-border{
-  border: 0.08em solid var(--primary-color);
-}
-.width60{
-  width: 60%;
-}
-.width40{
-  width: 40%;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown-content {
-  position: absolute;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  z-index: 1;
-  min-width: 100%;
-  text-align: left;
-  border: none;
-  font-size: 2em;
-}
-.dropdown-content-hide {
+
+
+.hide-content {
   display: none;
 }
-.dropdown-content a {
-  color: var(--primary-color);
-  padding: 12px 5px;
-  text-decoration: none;
-  display: block;
-  font-size: 2em;
-}
-.dropdown-content a:hover {
-  background-color: rgba(245, 52, 8, 0.048);
-}
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--primary-color);
-  opacity: 1;
+.show-content {
+  display: '';
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: var(--primary-color);
-}
 
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: var(--primary-color);
-}
