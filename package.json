@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages -d docs",
     "dev": "parcel index.html -d dev",
-    "build": "parcel build index.html -d docs"
+    "build": "parcel build index.html -d docs --public-url ./"
   },
   "keywords": [],
   "author": "",

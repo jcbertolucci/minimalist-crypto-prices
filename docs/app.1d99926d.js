@@ -926,4 +926,4 @@ var e=arguments[3];if(require("core-js/shim"),require("regenerator-runtime/runti
 },{"core-js/shim":"mRa+","regenerator-runtime/runtime":"KA2S","core-js/fn/regexp/escape":"65p1"}],"QdeU":[function(require,module,exports) {
 "use strict";var e=u(require("./view/mainComp")),t=u(require("./model/fetchCoins")),r=u(require("babel-polyfill")),a=require("./model/data");function u(e){return e&&e.__esModule?e:{default:e}}document.addEventListener("readystatechange",function(r){(0,t.default)(),(0,e.default)("app")});
 },{"./view/mainComp":"611g","./model/fetchCoins":"f0J8","babel-polyfill":"JIy0","./model/data":"ecTE"}]},{},["QdeU"], null)
-//# sourceMappingURL=/app.1a751036.map
+//# sourceMappingURL=app.1a751036.map
