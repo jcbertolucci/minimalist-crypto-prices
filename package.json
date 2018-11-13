@@ -1,9 +1,8 @@
 {
-  "name": "CryptoPrices",
+  "name": "cryptoprices",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
-    "scripts": {
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,10 +11,21 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
-    "js": "^0.1.0"
-  },
-  "devDependencies": {
+    "js": "^0.1.0",
     "cssnano": "^4.1.7",
     "gh-pages": "^2.0.1"
-  }
+  },
+  "devDependencies": {},
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcbertolucci/minimalist-crypto-prices.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jcbertolucci/minimalist-crypto-prices/issues"
+  },
+  "homepage": "https://github.com/jcbertolucci/minimalist-crypto-prices#readme",
+  "description": ""
 }
