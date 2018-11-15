@@ -2,7 +2,7 @@ import {dataCoins} from '../model/data'
 import renderDropDownComp from '../view/dropDownComp'
 import util from '../util/util';
 
-export default function renderDropDownCoins(event){
+export default function dropDownCoinsComponent(event){
   let inputValue = event.target.value;
   let arrayCoins = dataCoins.get();
   let dropDownDiv = document.getElementById("myDropdown");

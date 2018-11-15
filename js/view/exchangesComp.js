@@ -1,6 +1,6 @@
 import removeChildren from '../util/util';
 
-export default function renderExchangeComponent(arrayExchanges){
+export default function renderExchangeComp(arrayExchanges){
 
   /* let h1_html = '<h1>Test</h1>' */
   let bottomDiv = document.getElementById("section-bottom"); 
@@ -35,5 +35,6 @@ export default function renderExchangeComponent(arrayExchanges){
 
       bottomDiv.appendChild(newDiv);
     })
+    
   }
 }

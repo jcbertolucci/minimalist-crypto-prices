@@ -1,4 +1,5 @@
 export default function renderCardComp(content){
+  
   let parent = document.getElementById("section-middle");
   let cardHTML = `<div class="card-exchange">
                     <div class="card-top">
@@ -7,11 +8,30 @@ export default function renderCardComp(content){
                       </div>
                     </div>
                     <div class="card-content">
-                      <h3>Price: ${content.TOSYMBOL} ${content.PRICE}</h3>
-                      <h5>Volume 24h: ${content.FROMSYMBOL} ${content.VOLUME24HOUR}</h5>
-                      <h5>High day: ${content.TOSYMBOL} ${content.HIGH24HOUR}</h5>
-                      <h5>Low day: ${content.TOSYMBOL} ${content.LOW24HOUR}</h5>
+                      <div class="price-area">
+                        <h3>${content.TOSYMBOL} ${content.PRICE.toFixed(2)}</h3>
+                      </div>
+                      <div class="text-area">
+                        <h5><span>Change 24h:</span></h5>
+                        <h5><span>Volume 24h:</span></h5>
+                        <h5><span>High day:</span></h5>
+                        <h5><span>Low day:</span></h5>
+                      </div>
+                      <div class="value-area">
+                        ${isItNegative(content.CHANGEPCT24HOUR) ?
+                          `<h5 class="negative-color">${content.CHANGEPCT24HOUR.toFixed(4)}<span>%</span></h5>` :
+                          `<h5 class="positive-color">${content.CHANGEPCT24HOUR.toFixed(4)}<span>%</span></h5>`
+                        }
+                        
+                        <h5><span>${content.FROMSYMBOL}</span> ${content.VOLUME24HOUR.toFixed(4)}</h5>
+                        <h5><span>${content.TOSYMBOL}</span> ${content.HIGH24HOUR.toFixed(4)}</h5>
+                        <h5><span>${content.TOSYMBOL}</span> ${content.LOW24HOUR.toFixed(4)}</h5>
+                      </div>
                     </div>
                 </div>`
   parent.insertAdjacentHTML('afterbegin',cardHTML);
+}
+function isItNegative(number){
+  const isNeg = number < 0 ? true : false;
+  return isNeg
 }

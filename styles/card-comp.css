@@ -1,5 +1,5 @@
 .card-exchange{
-  height: 290px;
+  height: 300px;
   width: 320px;
   border-radius: 6px;
   box-shadow: 1px 1px 2px 1px #ccc;
@@ -8,24 +8,43 @@
 .card-top{
   border-radius: 6px 6px 0px 0px;
   background-color: var(--primary-color);
-  min-height: 100px;
-  padding-top: 10px;
+  min-height: 80px;
+  padding-top: 5px;
   padding-left: 10px;
   text-align: left;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 .card-content{
-  font-family: 'Roboto', Courier, monospace;
-  font-size: 1.1em;
-  padding-top: 10px;
-  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "price-area price-area"
+                       "text-area value-area";
+  grid-row-gap: 10px;
+  font-size: 1.2em;
+  padding-left: 15px;
   color: rgb(44, 44, 44);  
   text-align: left;
-  line-height:0.6em;
+  line-height:0.1em;
 }
-.card-content h3{
-  padding-bottom: 20px;
+.price-area{
+  grid-area: price-area;
+}
+.text-area{
+  grid-area: text-area;
+}
+.value-area{
+  grid-area: value-area;
 }
 .card-content h5{
-  color: rgb(88, 88, 88);
+  
+}
+.card-content span{
+  font-weight: 200;
+}
+.negative-color{
+  color: red;
+}
+.positive-color{
+  color: green;
 }

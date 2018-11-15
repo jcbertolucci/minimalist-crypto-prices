@@ -3,7 +3,6 @@
   color: var(--primary-color);
   font-size: 4em;
   font-weight: 400;
-  width: 100%;
   border-radius: 3px;
   border: 3px solid var(--primary-color);;
   outline: none;
@@ -11,14 +10,20 @@
   margin-top: 2%;
 }
 ::-webkit-input-placeholder {
+  color: var(--primary-color);
   font-size: 0.5em;
 }
 ::-moz-placeholder {
+  color: var(--primary-color);
   font-size: 0.5em;
 }
 :-ms-input-placeholder {
+  color: var(--primary-color);
   font-size: 0.5em;
 }
 ::placeholder {
+  color: var(--primary-color);
+  opacity: 0.9;
   font-size: 0.5em;
+  text-justify: center;
 }

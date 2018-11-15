@@ -1,12 +1,13 @@
 import axios from 'axios'
 import { dataExchanges } from './exchanges'
 import renderCardComp from '../view/cardComp'
+import renderNoDataComp from '../view/noDataComp'
 import util from '../util/util'
 
 export default async function fetchExchanges(coinSymbol, currency){
   let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
   //new version
-  let url = `https://min-api.cryptocompare.com/data/top/exchanges/full?fsym=${coinSymbol}&tsym=${currency}`;
+  let url = `https://min-api.cryptocompare.com/data/top/exchanges/full?fsym=${coinSymbol}&tsym=${currency}&limit=20`;
   
   //old version
   //let url = `https://www.cryptocompare.com/api/data/coinsnapshot/?fsym=${coinSymbol}&tsym=${currency}`;  
@@ -16,6 +17,10 @@ export default async function fetchExchanges(coinSymbol, currency){
 
 //create a model for this
 function getExchanges(url){
+  //just temporarily
+  let parentCards = document.getElementById("section-middle");
+  let parentNoData = document.getElementById("section-bottom");
+
   axios.get(url)
   .then((res)=>{
     dataExchanges.clearData();
@@ -23,18 +28,20 @@ function getExchanges(url){
     dataExchanges.setMessage(res.data.Message);
     
     //just temporarily
-    let parentCards = document.getElementById("section-middle");
     util.removeChildren(parentCards);   
+    util.removeChildren(parentNoData);
 
-    console.log(dataExchanges.getExchanges());
+    //TODO - render input before(decoupled) from renderCardComp
+
+    
     dataExchanges.getExchanges().map( (exchange) => {
-      renderCardComp(exchange)
+      renderCardComp(exchange);
     })
   })
-  .then(()=>{
-    console.log("Done...");
-  })
   .catch((error)=>{
-    console.log(error);
+    //just temporarily
+    util.removeChildren(parentCards);   
+    util.removeChildren(parentNoData);
+    renderNoDataComp();
   })
 }

@@ -1,7 +1,8 @@
 import util from '../util/util';
-import renderExhanges from './exchangeCompController'
+import renderExhanges from './exchangesCompControl'
+import renderLoadingComp from '../view/loadingComp'
 
-export default function fillSearchInput(event){
+export default function fillSearchInputComponent(event){
   let clickedCoin = event.target.innerText;
   let coinName = clickedCoin.split('-')[0].trim();
   let coinSymbol = clickedCoin.split('-')[1].trim();
@@ -11,5 +12,6 @@ export default function fillSearchInput(event){
   searchInputHTML.value = coinName;
   util.removeChildren(dropDownDiv);
   util.hideDropDown(dropDownDiv);
+  renderLoadingComp();
   renderExhanges(coinName, coinSymbol);  
 }

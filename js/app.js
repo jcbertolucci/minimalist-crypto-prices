@@ -8,8 +8,5 @@ document.addEventListener('readystatechange', event => {
   fecthCoins();
   renderMainComp("app");
 })
-  
-  
-
 
 

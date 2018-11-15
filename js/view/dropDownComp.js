@@ -1,4 +1,4 @@
-import fillSearchInput from '../controller/fillSearchInputController';
+import fillSearchInput from '../controller/fillSearchInputControl';
 
 export default function renderDropDownComp(content, parent){
   

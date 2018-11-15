@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,400,900');
+@import url("https://fonts.googleapis.com/css?family=Lato:200,400,400i,700");
 @import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One|Ubuntu:400,700');
 
 *{ 
@@ -11,15 +11,18 @@ body{
   margin: 0;
   color: var(--primary-color);
   background-color: white;
-  font-family: 'Rubik Mono One', sans-serif;  
+  font-family: 'Roboto', sans-serif;  
 }
 .wrapper{
   display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 1fr auto 1fr;
   justify-items: center;
-  grid-row-gap: 150px;
+  grid-row-gap: 50px;
 }
 .flex-top{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }
 .flex-middle{
   display: grid;
@@ -28,10 +31,12 @@ body{
   grid-row-gap: 40px;
 }
 .flex-bottom{
-  
+  align-self: center;
 }
-
-
+.filters{
+  padding-top: 20px;
+  justify-self: end;
+}
 .hide-content {
   display: none;
 }
