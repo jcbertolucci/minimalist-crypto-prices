@@ -3,12 +3,10 @@ export default function renderCardComp(content){
   let parent = document.getElementById("section-middle");
   let cardHTML = `<div class="card-exchange">
                     <div class="card-top">
-                      <div>
-                        <h1>${content.MARKET}</h1>  
-                      </div>
                     </div>
                     <div class="card-content">
                       <div class="price-area">
+                        <h1 class="card-title">${content.MARKET}</h1>
                         <h3>${content.TOSYMBOL} ${content.PRICE.toFixed(2)}</h3>
                       </div>
                       <div class="text-area">

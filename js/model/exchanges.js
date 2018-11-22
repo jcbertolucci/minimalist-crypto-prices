@@ -1,7 +1,9 @@
 export const dataExchanges = {
+
   exchanges: [],
   message:"",
-  getExchanges: function () {
+  
+  getExchanges: function (){
     return this.exchanges;
   },
   setExchanges: function (value) {
@@ -13,8 +15,18 @@ export const dataExchanges = {
   setMessage: function (value) {
     this.message = value;
   },
-  clearData: function (){
+  clearData: function () {
     this.message = "";
-    this.exchanges = []
+    this.exchanges = [];
+  },
+  sortPrice: function () {
+    this.exchanges.sort( (a, b) => {
+      return a.PRICE - b.PRICE;
+    }) 
+  },
+  sortVolume: function () {
+    this.exchanges.sort( (a, b) => {
+      return b.VOLUME24HOUR - a.VOLUME24HOUR;
+    }) 
   }
 }

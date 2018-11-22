@@ -3,6 +3,7 @@ import { dataExchanges } from './exchanges'
 import renderCardComp from '../view/cardComp'
 import renderNoDataComp from '../view/noDataComp'
 import util from '../util/util'
+import buttons from '../util/buttonsEvents'
 
 export default async function fetchExchanges(coinSymbol, currency){
   let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
@@ -32,16 +33,17 @@ function getExchanges(url){
     util.removeChildren(parentNoData);
 
     //TODO - render input before(decoupled) from renderCardComp
-
-    
     dataExchanges.getExchanges().map( (exchange) => {
       renderCardComp(exchange);
     })
+
+    buttons.setBtnEnable();
   })
   .catch((error)=>{
     //just temporarily
     util.removeChildren(parentCards);   
     util.removeChildren(parentNoData);
     renderNoDataComp();
+    buttons.setBtnDisable();
   })
 }

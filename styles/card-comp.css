@@ -1,15 +1,15 @@
 .card-exchange{
-  height: 300px;
-  width: 320px;
+  height: 310px;
+  width: 310px;
   border-radius: 6px;
   box-shadow: 1px 1px 2px 1px #ccc;
   color: white;
+  transition: all 1s;
 }
 .card-top{
   border-radius: 6px 6px 0px 0px;
   background-color: var(--primary-color);
-  min-height: 80px;
-  padding-top: 5px;
+  min-height: 25px;
   padding-left: 10px;
   text-align: left;
   font-size: 1em;
@@ -20,7 +20,6 @@
   grid-template-rows: auto;
   grid-template-areas: "price-area price-area"
                        "text-area value-area";
-  grid-row-gap: 10px;
   font-size: 1.2em;
   padding-left: 15px;
   color: rgb(44, 44, 44);  
@@ -36,8 +35,11 @@
 .value-area{
   grid-area: value-area;
 }
-.card-content h5{
-  
+.card-title{
+  margin-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid var(--primary-color);
 }
 .card-content span{
   font-weight: 200;
@@ -47,4 +49,7 @@
 }
 .positive-color{
   color: green;
+}
+.is-moved {
+  transform: translateX(145px);
 }

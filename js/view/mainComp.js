@@ -1,3 +1,4 @@
+import buttonsEvents from '../util/buttonsEvents'
 import util from '../util/util'
 import dropDownCoinsComponent from '../controller/dropDownCompControl'
 
@@ -7,6 +8,7 @@ import dropDownCss from '../../styles/drop-down-comp';
 import cardsCss from '../../styles/card-comp';
 import noDataCss from '../../styles/no-data-comp';
 import loadingCss from '../../styles/loading-comp';
+import buttonCss from '../../styles/button';
 
 export default function renderMainComp(parent){
 
@@ -14,23 +16,47 @@ export default function renderMainComp(parent){
   let mainElement = document.getElementById("app");
   util.removeChildren(mainElement);
   let loadingCompHTML =  `<div id="main-comp" class="wrapper">
-                          <section id="section-top" class="flex-top"> 
-                            <div id="div-top" class="dropdown">
-                              <input id="search-input" class="input" placeholder="Search coin"type="text">
-                              <div id="myDropdown" class="dropdown-content hide-content">
+                            <section id="section-top" class="flex-top"> 
+                              <div id="div-top" class="dropdown">
+                                <input id="search-input" class="input" placeholder="Search coin"type="text">                                
+                                <div id="myDropdown" class="dropdown-content hide-content">
+                                </div>
                               </div>
-                            </div>
-                            
-                          </section>
-                          <section id="section-middle" class="flex-middle"> 
-                          </section>
-                          <section id="section-bottom" class="flex-bottom"> 
-                            
-                          </section></div>`;
+                              <div class="options-area">
+                                <p>Currency:</p>
+                                <button id="btn-usd" class="button button-pressed">USD</button>
+                                <button id="btn-aud" class="button">AUD</button>
+                              </div>
+                              <div class="sorting-area">
+                                <p>Sort by:</p>
+                                <button id="btn-volume" class="button button-disable">Volume</button>
+                                <button id="btn-price" class="button button-disable">Lowest Price</button>
+                              </div>
+                            </section>
+                            <section id="section-middle" class="flex-middle"> 
+                            </section>
+                            <section id="section-bottom" class="flex-bottom"> 
+                            </section>
+                          </div>`;
 
-  parentElement.insertAdjacentHTML('afterbegin',loadingCompHTML);      
+  parentElement.insertAdjacentHTML('afterbegin',loadingCompHTML);   
+  
+  setDOMEvents();
+  /* setDOMInitState(); */
+
+}
+function setDOMEvents(){
   let inputCoin = document.getElementById("search-input");
+  let btnUSD = document.getElementById("btn-usd");
+  let btnAUD = document.getElementById("btn-aud");
+  let btnVolume = document.getElementById("btn-volume");
+  let btnPrice = document.getElementById("btn-price");
+
   inputCoin.oninput = dropDownCoinsComponent;               
   inputCoin.onchange = dropDownCoinsComponent;
-  
+  btnVolume.onclick = buttonsEvents.setBtnVolumeEvt;
+  btnPrice.onclick = buttonsEvents.setBtnPriceEvt;
 }
+/* function setDOMInitState(){
+
+} */
