@@ -43,7 +43,6 @@ function reorderCards(){
 
   allCards.forEach((item) =>{
     order = getCardExchangeOrder(dataExchanges.getExchanges(), item);
-    console.log(order, item.querySelector(".card-title").textContent);
     item.style.order = order 
   });
 }

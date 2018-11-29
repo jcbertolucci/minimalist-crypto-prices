@@ -1,6 +1,8 @@
+import { renderComp } from '../util/util'
+
 export default function renderCardComp(content){
-  
-  let parent = document.getElementById("section-middle");
+  let isElemLonely = false;
+  let parentId = "section-middle";
   let cardHTML = `<div class="card-exchange">
                     <div class="card-top">
                     </div>
@@ -27,7 +29,7 @@ export default function renderCardComp(content){
                       </div>
                     </div>
                 </div>`
-  parent.insertAdjacentHTML('afterbegin',cardHTML);
+  renderComp(parentId, cardHTML, isElemLonely);
 }
 function isItNegative(number){
   const isNeg = number < 0 ? true : false;

@@ -1,4 +1,4 @@
-import removeChildren from '../util/util';
+import {removeChildren, renderComp} from '../util/util';
 
 export default function renderExchangeComp(arrayExchanges){
 
